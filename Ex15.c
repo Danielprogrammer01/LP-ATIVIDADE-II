@@ -21,51 +21,51 @@ int main()
 
     do
     {
-        printf("\nTABELA DE CONVERSÕES\n");
-        printf("\n( 1 ) - Quilômetros(Km) --> Milhas(Mi)");
-        printf("\n( 2 ) - Milhas(Mi) --> Quilômetros(Km)");
-        printf("\n( 3 ) - Celsius(°C) --> Fahrenheit(°F)");
-        printf("\n( 4 ) - Fahrenheit(°F) --> Celsius(°C)\n");
+        printf("\nTABELA DE CONVERSÃ•ES\n");
+        printf("\n( 1 ) - QuilÃ´metros(Km) --> Milhas(Mi)");
+        printf("\n( 2 ) - Milhas(Mi) --> QuilÃ´metros(Km)");
+        printf("\n( 3 ) - Celsius(Â°C) --> Fahrenheit(Â°F)");
+        printf("\n( 4 ) - Fahrenheit(Â°F) --> Celsius(Â°C)\n");
 
-        printf("\nDigite a opção desejada: ");
+        printf("\nDigite a opÃ§Ã£o desejada: ");
         scanf("%d", &opcao);
 
         switch (opcao)
         {
         case 1:
 
-            printf("\nDigite a distância em Quilômetros(Km): ");
+            printf("\nDigite a distÃ¢ncia em QuilÃ´metros(Km): ");
             scanf("%f", &quilometros);
             conversaoParaMilhas = quilometros / 1.609;
-            printf("Conversão para Milhas(Mi): %.2f\n", conversaoParaMilhas);
+            printf("ConversÃ£o para Milhas(Mi): %.2f\n", conversaoParaMilhas);
 
             break;
 
         case 2:
-            printf("\nDigite a distância em Milhas(Mi): ");
+            printf("\nDigite a distÃ¢ncia em Milhas(Mi): ");
             scanf("%f", &milhas);
             conversaoParaQuilometros = milhas * 1.609;
-            printf("Conversão para Quilômetros(Km): %.2f\n", conversaoParaQuilometros);
+            printf("ConversÃ£o para QuilÃ´metros(Km): %.2f\n", conversaoParaQuilometros);
 
             break;
 
         case 3:
-            printf("\nDigite a temperatura em Celsius(°C): ");
+            printf("\nDigite a temperatura em Celsius(Â°C): ");
             scanf("%f", &celsius);
-            conversaoParaCelsius = (fahrenheit - 32) * 5/9;
-            printf("Conversão para Fahrenheit (°F): %.2f\n", conversaoParaFahrenheit);
+            conversaoParaFahrenheit = (celsius * 9/5) + 32;
+            printf("ConversÃ£o para Fahrenheit (Â°F): %.2f\n", conversaoParaFahrenheit);
 
             break;
 
         case 4:
-            printf("\nDigite a temperatura em Fahrenheit(°F): ");
+            printf("\nDigite a temperatura em Fahrenheit(Â°F): ");
             scanf("%f", &fahrenheit);
-            conversaoParaFahrenheit = (celsius * 9/5) + 32;
-            printf("Conversão para Celsius(°C): %.2f\n", conversaoParaCelsius);
+            conversaoParaCelsius = (fahrenheit - 32) * 5/9;
+            printf("ConversÃ£o para Celsius(Â°C): %.2f\n", conversaoParaCelsius);
             break;
 
         default:
-            printf("\nOpção inválida! Digite novamente!\n");
+            printf("\nOpÃ§Ã£o invÃ¡lida! Digite novamente!\n");
             break;
         }
 
